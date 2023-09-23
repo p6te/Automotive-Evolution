@@ -35,11 +35,20 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a.active {
+  color: tomato;
 }
 
 /* Make images easier to work with */
