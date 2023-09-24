@@ -1,8 +1,20 @@
 import { sectionIds, sections } from "../../constants/sectionIds";
-import { useState, useEffect } from "react";
-import { StyledLink, StyledList, StyledListItem, StyledNav } from "./styled";
+import { useState, useEffect, MouseEventHandler } from "react";
+import {
+  StyledList,
+  StyledListItem,
+  StyledNav,
+  StyledToggleButton,
+  StyledToogleInput,
+  StyledToogleLabel,
+} from "./styled";
+import { Link } from "react-router-dom";
 
-const Navigation = () => {
+type Props = {
+  toggleTheme: MouseEventHandler<HTMLInputElement>;
+};
+
+const Navigation: React.FC<Props> = ({ toggleTheme }) => {
   const [activeLink, setActiveLink] = useState<sectionIds | string | null>(
     sectionIds.section1
   );
@@ -51,21 +63,31 @@ const Navigation = () => {
   }, []);
 
   return (
-    <StyledNav>
-      <StyledList>
-        {sections.map((sectionId, index) => {
-          return (
-            <StyledListItem
-              key={index}
-              onClick={() => scrollToSection(sectionId)}
-              className={activeLink === sectionId ? "active" : ""}
-            >
-              {<StyledLink to="/"></StyledLink>}
-            </StyledListItem>
-          );
-        })}
-      </StyledList>
-    </StyledNav>
+    <>
+      <StyledNav>
+        <StyledToggleButton>
+          <StyledToogleInput
+            type="checkbox"
+            id="switch"
+            onClick={toggleTheme}
+          />
+          <StyledToogleLabel htmlFor="switch">Toggle</StyledToogleLabel>
+        </StyledToggleButton>
+        <StyledList>
+          {sections.map((sectionId, index) => {
+            return (
+              <StyledListItem
+                key={index}
+                onClick={() => scrollToSection(sectionId)}
+                className={activeLink === sectionId ? "active" : ""}
+              >
+                {<Link to="/"></Link>}
+              </StyledListItem>
+            );
+          })}
+        </StyledList>
+      </StyledNav>
+    </>
   );
 };
 

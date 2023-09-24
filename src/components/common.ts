@@ -12,4 +12,6 @@ export const SectionContainer = styled.section`
   min-height: 100vh;
   border: 1px solid black;
   scroll-snap-align: center;
+  background-color: ${(props) => props.theme.background};
+  transition: all 0.3s ease;
 `;
