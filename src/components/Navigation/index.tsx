@@ -1,7 +1,6 @@
 import { sectionIds, sections } from "../../constants/sectionIds";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { StyledNav } from "./styled";
+import { StyledLink, StyledList, StyledListItem, StyledNav } from "./styled";
 
 const Navigation = () => {
   const [activeLink, setActiveLink] = useState<sectionIds | string | null>(
@@ -23,8 +22,9 @@ const Navigation = () => {
   const observer = new IntersectionObserver(
     (entires) => {
       entires.forEach((entry) => {
-        setActiveLink(entry.target.getAttribute("id"));
-        console.log(entry.target.getAttribute("id"));
+        if (entry.intersectionRatio > 0.5) {
+          setActiveLink(entry.target.getAttribute("id"));
+        }
       });
     },
     {
@@ -32,6 +32,7 @@ const Navigation = () => {
       rootMargin: "-20px",
     }
   );
+
   useEffect(() => {
     const handleScroll = () => {
       sections.map((set) => {
@@ -51,22 +52,19 @@ const Navigation = () => {
 
   return (
     <StyledNav>
-      <ul>
+      <StyledList>
         {sections.map((sectionId, index) => {
           return (
-            <li key={index} onClick={() => scrollToSection(sectionId)}>
-              {
-                <Link
-                  to="/"
-                  className={activeLink === sectionId ? "active" : ""}
-                >
-                  {sectionId}
-                </Link>
-              }
-            </li>
+            <StyledListItem
+              key={index}
+              onClick={() => scrollToSection(sectionId)}
+              className={activeLink === sectionId ? "active" : ""}
+            >
+              {<StyledLink to="/"></StyledLink>}
+            </StyledListItem>
           );
         })}
-      </ul>
+      </StyledList>
     </StyledNav>
   );
 };

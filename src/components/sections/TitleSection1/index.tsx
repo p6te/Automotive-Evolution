@@ -1,12 +1,8 @@
 import { SectionContainer } from "src/components/common";
-import { sectionIds } from "../../../constants/sectionIds";
+import { sectionIds } from "src/constants/sectionIds";
 
 const TitleSection = () => {
-  return (
-    <section id={sectionIds[sectionIds.section1]}>
-      <SectionContainer>Title</SectionContainer>
-    </section>
-  );
+  return <SectionContainer id={sectionIds.section1}>Section1</SectionContainer>;
 };
 
 export default TitleSection;

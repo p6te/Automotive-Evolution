@@ -37,6 +37,12 @@ body {
   line-height: 1.5;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* A elements that don't have a class get default styles */
@@ -46,9 +52,6 @@ a:not([class]) {
 a {
   text-decoration: none;
   color: black;
-}
-a.active {
-  color: tomato;
 }
 
 /* Make images easier to work with */

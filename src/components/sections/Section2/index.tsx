@@ -2,11 +2,7 @@ import { SectionContainer } from "src/components/common";
 import { sectionIds } from "src/constants/sectionIds";
 
 const Section2 = () => {
-  return (
-    <section id={sectionIds.section2}>
-      <SectionContainer>Section2</SectionContainer>
-    </section>
-  );
+  return <SectionContainer id={sectionIds.section2}>Section2</SectionContainer>;
 };
 
 export default Section2;

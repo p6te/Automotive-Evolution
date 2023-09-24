@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const SectionContainer = styled.div`
+export const PageContainer = styled.div``;
+
+export const SectionContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,4 +11,5 @@ export const SectionContainer = styled.div`
   height: 100vh;
   min-height: 100vh;
   border: 1px solid black;
+  scroll-snap-align: center;
 `;
