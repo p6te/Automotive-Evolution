@@ -7,7 +7,6 @@ export const StyledImg = styled.img`
   width: 50rem;
   position: absolute;
   right: 12rem;
-  bottom: 3rem;
 `;
 
 export const StyledTitle = styled(motion.h1)`
