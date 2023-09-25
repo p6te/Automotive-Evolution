@@ -9,6 +9,7 @@ export const StyledNav = styled.aside`
   align-items: center;
   right: 0;
   width: 200px;
+  z-index: 10;
 `;
 
 export const StyledList = styled.ul`

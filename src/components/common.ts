@@ -7,11 +7,11 @@ export const SectionContainer = styled.section`
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 12rem 0;
   height: 100vh;
   min-height: 100vh;
   border: 1px solid black;
   scroll-snap-align: center;
   background-color: ${(props) => props.theme.background};
   transition: all 0.3s ease;
+  position: relative;
 `;
