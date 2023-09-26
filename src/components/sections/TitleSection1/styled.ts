@@ -7,6 +7,8 @@ export const StyledImg = styled.img`
   width: 50rem;
   position: absolute;
   right: 12rem;
+  bottom: 0;
+  right: 0;
 `;
 
 export const StyledTitle = styled(motion.h1)`
@@ -17,9 +19,11 @@ export const StyledTitle = styled(motion.h1)`
 
 export const Flexbox = styled.div`
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  margin: auto;
 `;
 export const Title = styled(motion.h1)`
   color: white;
@@ -27,6 +31,6 @@ export const Title = styled(motion.h1)`
   z-index: 1;
   margin: 0;
   white-space: nowrap;
-  margin-top: auto;
+
   transition: all 2s ease-in-out;
 `;

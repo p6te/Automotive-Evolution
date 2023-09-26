@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: grid;
-  height: 100%;
-  width: 100%;
+  position: relative;
+
   grid-template-areas:
     " sec1 sec1 ."
     ". sec2 sec2"
@@ -11,6 +11,21 @@ export const Container = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 1rem;
+
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    background-image: url("src/assets/images/blueprint1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+  }
 `;
 
 export const SectionTitle = styled.h2`

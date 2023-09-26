@@ -6,31 +6,15 @@ import { useScroll, useTransform } from "framer-motion";
 
 const TitleSection = () => {
   const { scrollYProgress } = useScroll();
-  const x = useTransform(scrollYProgress, [0, 1], [1, 3000]);
+  const x = useTransform(scrollYProgress, [0, 0.1], [1, 3000]);
 
   return (
     <SectionContainer id={sectionIds.section1}>
       <Flexbox>
         <StyledTitle>Automotive</StyledTitle>
         <Title style={{ x }}> Evolution</Title>
-        {/* 
-        <StyledTitle
-          animate={{
-            x: -1000,
-          }}
-          initial={{
-            x: 500,
-          }}
-          transition={{
-            repeat: Infinity,
-            repeatType: "reverse",
-            duration: 8,
-          }}
-        >
-          Evolution
-        </StyledTitle> */}
+        <StyledImg src={car1} alt="car-image" />
       </Flexbox>
-      <StyledImg src={car1} alt="car-image" />
     </SectionContainer>
   );
 };
