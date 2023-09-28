@@ -4,12 +4,14 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 `;
 
 export const AxisContainer = styled(motion.div)`
   width: 8px;
   height: 70%;
-  background: red;
+  background: ${(props) => props.theme.primary};
   align-self: center;
   transform-origin: top;
 `;
@@ -23,50 +25,6 @@ export const Text2 = styled.h5`
   font-size: 2rem;
   font-weight: 500;
   grid-area: sec2;
-`;
-
-export const Text3 = styled.h5`
-  font-size: 2rem;
-  font-weight: 500;
-  grid-area: sec3;
-`;
-
-export const Text4 = styled.h5`
-  font-size: 2rem;
-  font-weight: 500;
-  grid-area: sec4;
-`;
-
-export const Text5 = styled.h5`
-  font-size: 2rem;
-  font-weight: 500;
-  grid-area: sec5;
-`;
-
-export const Line1 = styled.div`
-  width: 10px;
-  height: 15vh;
-  background-color: tomato;
-`;
-export const Line2 = styled.div`
-  width: 10px;
-  height: 15vh;
-  background-color: tomato;
-`;
-export const Line3 = styled.div`
-  width: 10px;
-  height: 15vh;
-  background-color: tomato;
-`;
-export const Line4 = styled.div`
-  width: 10px;
-  height: 15vh;
-  background-color: tomato;
-`;
-export const Line5 = styled.div`
-  width: 10px;
-  height: 15vh;
-  background-color: tomato;
 `;
 
 export const SideContainer = styled.div`

@@ -1,21 +1,7 @@
 import { SectionContainer } from "src/components/common";
 import { sectionIds } from "src/constants/sectionIds";
-import {
-  AxisContainer,
-  Container,
-  Line1,
-  Line2,
-  Line3,
-  Line4,
-  Line5,
-  SideContainer,
-  Text1,
-  Text2,
-  Text3,
-  Text4,
-  Text5,
-} from "./styled";
-import { motion, useInView, useScroll } from "framer-motion";
+import { AxisContainer, Container, SideContainer, Text1 } from "./styled";
+import { useInView, useScroll } from "framer-motion";
 import { useRef } from "react";
 
 const Section3 = () => {
