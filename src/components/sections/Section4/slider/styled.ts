@@ -47,10 +47,43 @@ export const CarInfo = styled(motion.div)`
   }
 `;
 
+// passing props example
 interface Props extends HTMLMotionProps<"div"> {
   height?: number;
 }
 
 const Container = styled(motion<Props>("div"))`
   height: ${({ height }) => height};
+`;
+
+export const StyledButton = styled(motion.button)`
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const StyledArrow = styled(motion.img)`
+  background-color: lightgray;
+  border-radius: 50%;
+
+  padding: 10%;
+  width: 100px;
+  height: 100px;
+`;
+
+export const StyledArrowLeft = styled(motion.img)`
+  background-color: lightgray;
+  border-radius: 50%;
+  padding: 10%;
+  width: 100px;
+  height: 100px;
+  transform: scaleX(-1);
+`;
+
+export const ButtonsContainer = styled(motion.div)`
+  width: 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
 `;
