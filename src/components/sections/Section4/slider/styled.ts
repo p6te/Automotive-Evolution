@@ -68,7 +68,6 @@ export const StyledArrow = styled(motion.img)`
 
   padding: 10%;
   width: 100px;
-  height: 100px;
 `;
 
 export const StyledArrowLeft = styled(motion.img)`
@@ -76,7 +75,7 @@ export const StyledArrowLeft = styled(motion.img)`
   border-radius: 50%;
   padding: 10%;
   width: 100px;
-  height: 100px;
+
   transform: scaleX(-1);
 `;
 
@@ -86,4 +85,5 @@ export const ButtonsContainer = styled(motion.div)`
   justify-content: space-between;
   align-items: center;
   margin: auto;
+  gap: 10px;
 `;

@@ -1,19 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: grid;
+  display: flex;
   position: relative;
 
-  grid-template-areas:
-    " sec1 sec1 ."
-    ". sec2 sec2"
-    "sec3 . . ";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 1rem;
-
   &:before {
-    content: " ";
+    content: "";
     display: block;
     position: absolute;
     left: 0;
@@ -24,28 +16,43 @@ export const Container = styled.div`
     background-image: url("src/assets/images/blueprint1.jpg");
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-size: cover;
+    background-size: contain;
   }
 `;
 
 export const SectionTitle = styled.h2`
   font-size: 5rem;
-  grid-area: sec1;
+  flex-shrink: 2;
+  margin-top: 10%;
 `;
 
 export const StyledText = styled.h5`
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  grid-area: sec2;
-
   margin-right: 100px;
+  flex-shrink: 1;
 `;
 
 export const StyledImg = styled.img`
-  grid-area: sec3;
-  width: min-content;
-  position: relative;
+  position: absolute;
+
+  max-height: 80vh;
+  margin: auto;
 
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+`;
+
+export const RightSide = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+export const LeftSide = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  position: relative;
 `;

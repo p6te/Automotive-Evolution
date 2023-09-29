@@ -41,8 +41,7 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  /* -ms-overflow-style: none; */
 }
 
 /* A elements that don't have a class get default styles */
