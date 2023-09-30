@@ -29,7 +29,6 @@ export const SectionTitle = styled.h2`
 export const StyledText = styled.h5`
   font-size: 1.3rem;
   font-weight: 500;
-  margin-right: 100px;
   flex-shrink: 1;
 `;
 
@@ -48,6 +47,7 @@ export const RightSide = styled.div`
   flex: 1;
   flex-direction: column;
   gap: 20px;
+  margin-right: 130px;
 `;
 
 export const LeftSide = styled.div`

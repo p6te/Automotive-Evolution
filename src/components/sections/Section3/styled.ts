@@ -4,8 +4,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   min-height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
 `;
 
 export const AxisContainer = styled(motion.div)`
