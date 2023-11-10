@@ -15,7 +15,7 @@ export default defineConfig(({ command }) => {
   };
 
   if (command !== "serve") {
-    config.base = "/automotive-evolution/";
+    config.base = "/Automotive-Evolution/";
   }
 
   return config;

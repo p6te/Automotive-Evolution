@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <Router basename={import.meta.env.DEV ? "/" : "/automotive-evolution/"}>
+      <Router basename={import.meta.env.DEV ? "/" : "/Automotive-Evolution/"}>
         <ThemeProvider theme={isLightTheme ? light : dark}>
           <Container>
             <Navigation toggleTheme={toggleTheme} />
