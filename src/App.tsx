@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <Router basename={import.meta.env.DEV ? "/" : "/react-vite-gh-pages/"}>
+      <Router basename={import.meta.env.DEV ? "/" : "/automotive-evolution/"}>
         <ThemeProvider theme={isLightTheme ? light : dark}>
           <Container>
             <Navigation toggleTheme={toggleTheme} />
