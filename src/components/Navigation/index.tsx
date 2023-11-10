@@ -60,6 +60,7 @@ const Navigation: React.FC<Props> = ({ toggleTheme }) => {
     return () => {
       window.addEventListener("scroll", handleScroll);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

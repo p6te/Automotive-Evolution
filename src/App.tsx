@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Navigation from "./components/Navigation";
 import { Container } from "./styled";
 import { ThemeProvider } from "styled-components";
-import theme, { light, dark, ThemeVersions } from "./theme/theme";
+import { light, dark } from "./theme/theme";
 import { MouseEventHandler, useState } from "react";
 
 function App() {

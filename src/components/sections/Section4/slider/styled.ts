@@ -1,4 +1,4 @@
-import { HTMLMotionProps, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const Carousel = styled(motion.div)`
@@ -45,15 +45,6 @@ export const CarInfo = styled(motion.div)`
   & h3 {
     font-size: 1.8rem;
   }
-`;
-
-// passing props example
-interface Props extends HTMLMotionProps<"div"> {
-  height?: number;
-}
-
-const Container = styled(motion<Props>("div"))`
-  height: ${({ height }) => height};
 `;
 
 export const StyledButton = styled(motion.button)`
